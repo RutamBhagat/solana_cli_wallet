@@ -29,7 +29,17 @@ export async function requestAirdrop(connection: Connection, publicKey: PublicKe
   if (amount <= 0 || amount > 2) {
     throw new Error("Airdrop amount must be between 0 and 2 SOL");
   }
+
   const signature = await connection.requestAirdrop(publicKey, amount * LAMPORTS_PER_SOL);
-  await connection.confirmTransaction(signature);
+
+  // Use the newer version of confirmTransaction
+  const latestBlockHash = await connection.getLatestBlockhash();
+
+  await connection.confirmTransaction({
+    blockhash: latestBlockHash.blockhash,
+    lastValidBlockHeight: latestBlockHash.lastValidBlockHeight,
+    signature: signature,
+  });
+
   return signature;
 }
