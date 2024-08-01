@@ -2,6 +2,9 @@
   "name": "solana_summer_internship",
   "module": "index.ts",
   "type": "module",
+  "scripts": {
+    "wallet": "bun src/wallet.ts"
+  },
   "devDependencies": {
     "@types/bun": "latest"
   },

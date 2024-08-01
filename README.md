@@ -1,4 +1,4 @@
-# solana_summer_internship
+# solana_cli_wallet
 
 To install dependencies:
 
@@ -9,8 +9,7 @@ bun install
 To run:
 
 ```bash
-bun run index.ts
+bun wallet
 ```
 
 This project was created using `bun init` in bun v1.1.21. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
-# solana_cli_wallet
