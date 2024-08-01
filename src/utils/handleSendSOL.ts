@@ -8,6 +8,7 @@ import {
   type Connection,
 } from "@solana/web3.js";
 import { base58ToKeypair } from "./handleUtils";
+import inquirer from "inquirer";
 
 export async function handleSendSOL(connection: Connection) {
   const sendSOLQuestions = [

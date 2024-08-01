@@ -1,4 +1,5 @@
 import { LAMPORTS_PER_SOL, PublicKey, type Connection } from "@solana/web3.js";
+import inquirer from "inquirer";
 
 export async function handleRequestAirdrop(connection: Connection) {
   const airdropQuestions = [

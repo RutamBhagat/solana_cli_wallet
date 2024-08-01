@@ -1,5 +1,6 @@
 import { Keypair } from "@solana/web3.js";
 import bs58 from "bs58";
+import inquirer from "inquirer";
 
 export async function handleUtils() {
   const utilsQuestion = [
